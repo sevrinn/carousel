@@ -8,7 +8,13 @@ const hideAllSlides = () => {
   }
 }
 const moveToPrevSlide = () => {
-  console.log("moving to previous slide")
+  hideAllSlides()
+  if (slidePosition === 0) {
+    slidePosition = totalSlides - 1
+  } else {
+    slidePosition--
+  }
+  slides[slidePosition].classList.add("carousel-item-visible")
  }
  
  const moveToNextSlide = () => {
