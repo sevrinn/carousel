@@ -2,13 +2,14 @@ const slides = document.querySelectorAll(".carousel-item")
 let slidePosition = 0
 const totalSlides = slides.length
 
-document.querySelector("#carousel-btn-prev").addEventListener("click", moveToNextSlide)
-document.querySelector("#carousel-btn-next").addEventListener("click", moveToPrevSlide)
-
 const moveToPrevSlide = () => {
+  console.log("moving to previous slide")
+ }
+ 
+ const moveToNextSlide = () => {
+   console.log("moving to next slide")
+ }
 
-}
+document.querySelector("#carousel-btn-prev").addEventListener("click", moveToPrevSlide)
+document.querySelector("#carousel-btn-next").addEventListener("click", moveToNextSlide)
 
-const moveToNextSlide = () => {
-
-}
