@@ -7,7 +7,13 @@ const moveToPrevSlide = () => {
  }
  
  const moveToNextSlide = () => {
-   console.log("moving to next slide")
+   if (slidePosition === totalSlides - 1) {
+     slidePosition = 0;
+   } else {
+     slidePosition++
+   }
+
+   slides[slidePosition].classList.add("carousel-item-visible")
  }
 
 document.querySelector("#carousel-btn-prev").addEventListener("click", moveToPrevSlide)
